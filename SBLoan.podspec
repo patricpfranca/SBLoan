@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBLoan'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Modulo utilizado no aplicativo SwiftBank para funcionalidade de Empréstimos'
   s.description      = 'SBLoan é uma biblioteca que permite o usuário acessar sua carteira de crédito disponível'
 
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.swift_versions = ['5.0', '5.9']
 
-  s.source_files = 'SBLoan/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
   #   'SBLoan' => ['SBLoan/Assets/*.png']
