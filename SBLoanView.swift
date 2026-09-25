@@ -27,6 +27,9 @@ public struct SBLoanView: View {
             VStack {
                 headerView
                     .padding(.leading, 20)
+                
+                cardView
+                    .padding()
             }
         }
     }
@@ -52,6 +55,59 @@ public struct SBLoanView: View {
             
             Text("Antecipe seus planos!")
                 .font(.system(size: 24))
+                .foregroundColor(.black)
+                .fontWeight(.light)
+        }
+    }
+    
+    var cardView: some View {
+        RoundedRectangle(cornerRadius: 7)
+            .frame(maxWidth: .infinity)
+            .frame(height: 140)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 7))
+            .shadow(color: Color.gray.opacity(0.7), radius: 7, x: 0, y: 2)
+            .overlay {
+                VStack(alignment: .leading) {
+                    headerCardView
+                        .padding(.top, 20)
+                        .padding(.horizontal)
+                    
+                    headerTextCardView
+                        .padding(.horizontal)
+                    
+                    Spacer()
+                }
+            }
+    }
+    
+    var headerCardView: some View {
+        VStack(alignment: .leading) {
+            Text("veja sua opção de crédito pré-aprovado:")
+                .font(.system(size: 16))
+                .foregroundColor(.black)
+                .fontWeight(.medium)
+                .padding(.bottom, 5)
+            
+            HStack {
+                Image(systemName: "dollarsign.arrow.circlepath")
+                    .font(.system(size: 22))
+                
+                Text("Empréstimo Pessoal")
+                    .font(.system(size: 16))
+                    .foregroundColor(.black)
+                    .fontWeight(.light)
+                
+                Spacer()
+            }
+            .padding(.bottom, 5)
+        }
+    }
+    
+    var headerTextCardView: some View {
+        HStack {
+            Text("Guardar dinheiro é o primeiro passo para realizar grandes sonhos")
+                .font(.system(size: 12))
                 .foregroundColor(.black)
                 .fontWeight(.light)
         }
